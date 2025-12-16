@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->id();
+            $table->id()->index();
             $table->string('first_name');
             $table->string('middle_name')->nullable(true);
             $table->string('last_name');
@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('DOB');
             $table->date('admission_date');
             $table->enum('grade_admitted_to', ['JSS_1', 'JSS_2', 'JSS_3', 'SSS_1', 'SSS_2', 'SSS_3'])->default('JSS_1');
+            $table->enum('current_grade', ['JSS_1', 'JSS_2', 'JSS_3', 'SSS_1', 'SSS_2', 'SSS_3']);
             $table->timestamp('deleted_at');
             $table->boolean('active');
             $table->rememberToken();
