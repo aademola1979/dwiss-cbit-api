@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class StudentParentController extends Controller
 {
-    //
+    public function signup(Request $request) {
+        
+    }
 }

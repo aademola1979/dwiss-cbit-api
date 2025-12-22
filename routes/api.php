@@ -11,7 +11,21 @@ Route::get('/user', function (Request $request) {
 Route::get('/mypost', function(Request $request){
     return Response::json([
         'post'=>[
-        'id' => 'John' 
+        'id' => '1234' ,
+        'first_name'=> 'John',
+        'middle_name' => 'Ryan',
+        'last_name' => 'ogbe'
         ]
     ]);
+});
+
+Route::get('/blog', function (Request $request) {
+    return Response::json([
+        'post'=>[
+            'id'=> '67',
+            'title' => 'first blog',
+            'description' => '##description',
+            'content' => 'lorem oposum'
+
+        ]]);
 });
